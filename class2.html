@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME PAGE</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            background-color: #96D4D4;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+        table {
+            border-spacing: 10px;
+            width: 100%; 
+        }
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+        td:nth-child(even), th:nth-child(even) {
+            background-color: #BFEAEA;
+        }
+        tr {
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        table, th, td {
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+<table>
+    <tr>
+        <th colspan="3">Student Record</th>
+    </tr>
+    <tr>
+        <th style="width: 50%;">Name</th> 
+        <th>Age</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Alex rivera</td>
+        <td>28</td>
+        <td>alex.r@example.com</td>
+    </tr>
+
+    <tr>
+        <td>34</td>
+        <td>j.smith@example.com</td>
+    </tr>
+
+    <tr>
+        <td>sam tavlor</td>
+        <td>22</td>
+        <td>stavlor@example.com</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

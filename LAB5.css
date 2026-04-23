@@ -1,0 +1,28 @@
+
+.card {
+    width: 60%; 
+    margin: 50px auto; 
+    padding: 20px; 
+    border: 2px solid #333;
+    background-color: #f4f4f4;
+}
+
+
+#studentName {
+    font-size: 28px;
+}
+
+p {
+    font-size: 16px;
+    color: rgb(50, 50, 50);
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+
+.details {
+    background-color: #ddd;
+    padding: 10px;
+}
