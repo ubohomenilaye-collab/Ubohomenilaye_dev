@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Navigation</h2>
+
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="courses.html">Courses</a>
+            <a href="results.html">Results</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main">
+
+        <header class="topbar">
+            <h1>Welcome Back Student!</h1>
+
+            <button id="openModalBtn">View Notice</button>
+        </header>
+
+        <!-- CARDS -->
+        <section class="card-grid">
+
+            <div class="card">
+                <h3>Courses</h3>
+                <p>7 Active</p>
+            </div>
+
+            <div class="card">
+                <h3>Assignments</h3>
+                <p>3 Pending</p>
+            </div>
+
+            <div class="card">
+                <h3>CGPA</h3>
+                <p>4.67</p>
+            </div>
+        </section>
+
+        <!-- TABLE SECTION -->
+        <section class="table-section">
+            <h2>Todays Schedule</h2>
+
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                </tr>
+
+                <tr>
+                    <td>COS 102</td>
+                    <td>8:00 AM</td>
+                    <td>Class A</td>
+                </tr>
+
+                <tr>
+                    <td>MTH 102</td>
+                    <td>1:00 PM</td>
+                    <td>Class B</td>
+                </tr>
+
+                <tr>
+                    <td>SEN 182</td>
+                    <td>3:00 PM</td>
+                    <td>Class C</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <span class="close">&times;</span>
+        <h2>Notice</h2>
+        <p>SEN 182 assignment submission closes tomorrow at 11:59 PM.</p>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById("modal");
+    const openBtn = document.getElementById("openModalBtn");
+    const closeBtn = document.querySelector(".close");
+
+    openBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
